@@ -20,6 +20,7 @@ header{
     display: flex;
     flex-direction: row;
     height: 80px;
+    width: 100vw;
     max-width: fit-content;
     justify-content: space-between;
     position: fixed;
@@ -60,14 +61,11 @@ a:hover , i:hover{
     color: black;
     transition: 0.5s;
 }
-
 .menu-desplegable{
+    color:white;
     display: flex;
-}
-
-.menu-desplegable i{
-    padding-top: 9px;
-    color: white;
+    flex-direction: row;
+    gap:1rem;
 }
 
 .buscador{
@@ -110,13 +108,17 @@ body{
 }
 
 .logo-landing{
-    width: 40vw;
+    width: 400px;
+    padding-right: 25px;
+    padding-top: 25px;
 }
 
 .company-caja{
     display: flex;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
     padding-top: 5vw;
 }
 
@@ -124,7 +126,10 @@ body{
     font-size: 1.2rem;
     margin: 1rem;
     padding: 2rem;
-    width: 50vw;
+}
+.text-1-buttons p{
+    width: 300px;
+    padding-right: 10px;
 }
 
 .text-1-buttons h2{
@@ -165,17 +170,16 @@ body{
 
 .parrafo{
     max-width: fit-content;
-    width: 70vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-left: 12vw;
-    padding-right: 12vw;
     padding-top: 5vw;
     font-size: 1.2rem;
 }
-
+.parrafo p{
+    width: 500px;
+    padding-left: 5vw;
+    text-align: center;
+}
 .p-rojo{
     font-size: 2rem;
     margin: 2rem;
@@ -214,8 +218,8 @@ footer{
     background-color: #333399;
     color: white;
     display: flex;
-    max-width: fit-content;
     width: 100%;
+    align-content: flex-end;
 }
 
 .title-f{
@@ -234,21 +238,36 @@ footer{
     justify-content: space-between;
 }
 
-@media (max-width: 768px) {
+.hamburguesa-menu{
+    display: flex;
+    visibility: visible !important;
+    color:white;
+    font-size: large;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+@media (max-width: 780px) {
+    .text-1-buttons h2{
+        margin-top: 20px;
+    }
+    .logo-menu{
+        display: none;
+    }
     footer{
-        max-width: fit-content;
         width: 100%;
+        align-content:end;
     }
     .menu{
-        max-width: fit-content;
+        width: 100vw;
     }
     .links{
         display:none;
     }
     .logo-landing img{
-        width: 80vw;
-        padding-top: 28vw;
-        padding-right: 10vw;
+        width: 400px;
+        padding-top: 60px;
+        padding-right: 25px;
     }
     .text-1-buttons{
         padding-top:10vw;
@@ -260,12 +279,26 @@ footer{
         width: 90vw;
     }
 }
-@media (max-width: 992px) {
+@media (max-width: 864px) {
+    .hamburguesa-menu{
+        display: flex;
+    }
+    .menu{
+        width: fit-content;
+        max-width: fit-content;
+    }
     .links{
         display: flex;
     }
 }
-@media (max-width: 1200px) {
+@media (min-width: 992px) {
+    .hamburguesa-menu{
+        display: none;
+    }
+    .menu{
+        width: fit-content;
+        max-width: fit-content;
+    }
     .links{
         display:flex;
     }
